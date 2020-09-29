@@ -1,0 +1,46 @@
+.tab {
+  width: 300px;
+}
+
+.tab-item {
+  line-height: 29px;
+  height: 30px;
+  margin-top: -1px;
+  width: 300px;
+  border: 1px solid #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+.tab-item:hover input[type='radio']:checked + .tab-item {
+  background: #ddd;
+}
+
+.tab-content-item {
+  transition: all 0.4s;
+  display: none;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  border: 1px solid #ddd;
+  background: #ddd;
+  ul {
+    display:flex;
+    flex-wrap:wrap;
+    .byr-floor-room {
+      padding: 6px 5px;
+      color: #2d107f;
+      flex:1;
+      font-size:16px;
+      cursor: pointer;
+      &:hover {
+        color:red;
+      }
+    }
+  }
+}
+input[type='radio'] {
+  display: none;
+}
+input[type='radio']:checked + .tab-content-item {
+  display: block;
+}
